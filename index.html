@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <img src="static/logo.jpg" alt="Tech.Care Logo"> 
+    <nav>
+        <a href="#">Overview</a>
+        <a href="#">Patients</a>
+        <a href="#">Schedule</a>
+        <a href="#">Message</a>
+        <a href="#">Transactions</a>
+    </nav>
+    <div class="user-profile" style="display: flex; align-items: center;">
+        <img src="static/doctor.jpg" alt="Dr. Jose Simmons" style="height: 50px; width: 50px; margin-right: 10px;">
+        <span style="display: flex; align-items: center;">Dr. Jose Simmons</span>
+    </div>
+</div>
+
+    <div class="container">
+        
+
+       <div class="sidebar">
+        <h2>Patients</h2>
+        <ul id="patient-list">
+           
+        </ul>
+    </div>
+
+        <div class="content">
+            <section class="diagnosis-history">
+                <h2>Diagnosis History</h2>
+                <canvas id="bpChart"></canvas> 
+                <div class="vitals">
+                    <div class="vital">
+                        <img src="static/lungs.jpg" alt="Lungs">
+                        <h3>Respiratory Rate</h3>
+                        <p id="respiratory-rate">20 bpm</p>
+                    </div>
+                    <div class="vital">
+                        <img src="static/temp.jpg" alt="Temperature">
+                        <h3>Temperature</h3>
+                        <p id="temperature">98.6°F</p>
+                    </div>
+                    <div class="vital">
+                        <img src="static/heart.jpg" alt="Heart">
+                        <h3>Heart Rate</h3>
+                        <p id="heart-rate">78 bpm</p>
+                    </div>
+                  </div>
+            </section>
+
+            <section class="diagnostic-list">
+                <h2>Diagnostic List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problem/Diagnosis</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="diagnostic-list-body">
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="lab-results">
+                <h2>Lab Results</h2>
+                <ul id="lab-results-list">
+    
+                </ul>
+            </section>
+        </div>
+
+        <div class="patient-details">
+            <img id="profile-picture" src="https://via.placeholder.com/150" alt="Jessica Taylor">
+            <h2>Jessica Taylor</h2>
+            <ul>
+                <li>Date of Birth: <span id="dob">August 23, 1996</span></li>
+                <li>Gender: <span id="gender">Female</span></li>
+                <li>Contact Info: <span id="phone">415-555-1234</span></li>
+                <li>Emergency Contacts: <span id="emergency-contact">415-555-5678</span></li>
+                <li>Insurance Provider: <span id="insurance">Sunrise Health Assurance</span></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
